@@ -1,0 +1,28 @@
+CREATE TABLE store (id INTEGER PRIMARY KEY, item TEXT, section TEXT, price INTEGER, popularity INTEGER);
+INSERT INTO store VALUES (1, "banana", "produce", 4.49, 30);
+INSERT INTO store VALUES (2, "apples", "produce", 0.99, 75);
+INSERT INTO store VALUES (3, "toothbrush", "hygiene", 12.99, 85);
+INSERT INTO store VALUES (4, "steak", "meat", 20.99, 90);
+INSERT INTO store VALUES (5, "salmon", "seafood", 14.99, 85);
+INSERT INTO store VALUES (6, "lettuce", "produce", 3.25, 22);
+INSERT INTO store VALUES (7, "salsa", "fresh", 2.99, 55);
+INSERT INTO store VALUES (8, "toothpaste", "hygiene", 7.99, 50);
+INSERT INTO store VALUES (9, "pork", "meat", 20.99, 95);
+INSERT INTO store VALUES (10, "pizza", "frozen", 10.99, 99);
+INSERT INTO store VALUES (11, "frozen pie", "frozen", 12.99, 53);
+INSERT INTO store VALUES (12, "chocolate covered raisens", "bulk", 4.99, 40);
+INSERT INTO store VALUES (13, "preworkout", "health", 58.99,65);
+INSERT INTO store VALUES (14, "all purpose flour", "baking", 10.99, 26);
+INSERT INTO store VALUES (15, "cookies", "snacks", 4.99, 87);
+
+SELECT * FROM store
+ORDER BY price desc; 
+
+SELECT AVG(price) "avg frozen item price"
+FROM store
+where section='frozen'; 
+
+SELECT item, price, popularity
+FROM store
+order by popularity asc
+limit 5; 
