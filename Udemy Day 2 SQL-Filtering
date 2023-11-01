@@ -1,0 +1,104 @@
+Select 
+Count(*)
+From payment
+where customer_id =100;
+
+Select 
+first_name,
+last_name 
+from customer
+where first_name ='ERICA';
+
+Select
+count(*)
+from rental
+where return_date is not null;
+
+Select 
+*
+From payment
+where customer_id=30
+or customer_id=31
+and amount = 2.99;
+
+Select 
+*
+From payment
+where (customer_id=30
+or customer_id=31)
+and amount = 2.99;
+
+Select
+*
+From payment
+where (customer_id =322
+or customer_id=346
+or customer_id=354)
+and (amount < 2 or amount> 10) 
+order by customer_id asc,amount desc;
+
+Select
+*
+from rental
+where rental_date 
+between '2005-05-24' and '2005-05-26 00:00'
+order by rental_date desc;
+
+Select
+count(*)
+From payment
+where amount between 1.99 and 3.99
+and payment_date between '2020-01-26'and '2020-01-28';
+
+Select
+*
+From payment
+where customer_id in (12,25,67,93,124,234)
+and amount in (4.99,7.99,9.99)
+and payment_date between '2020-01-01' and '2020-02-01';
+
+Select 
+*
+From film
+where description like '%Drama%'
+and title like '_T%';
+
+Select
+count(*)
+From customer
+where first_name like '___'
+and (last_name like '%X'
+or last_name like '%Y');
+
+Select
+*
+From customer
+where first_name like '___'
+and (last_name like '%X'
+or last_name like '%Y');
+
+Select
+count(*)
+from film
+where description like '%Documentary%';
+
+Select
+count(*) as number_of_movie
+from film 
+where description like'%Saga%'
+and (title like 'A%'
+or title like '%R');
+
+Select
+*
+from customer
+where first_name like '%ER%'
+and first_name like '_A%'
+order by last_name desc;
+
+Select
+count(*)
+from payment 
+where (amount = 0 or amount between 3.99 and 7.99)
+and payment_date between '2020-05-01' and '2020-05-02';
+
