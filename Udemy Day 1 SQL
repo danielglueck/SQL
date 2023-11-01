@@ -1,0 +1,30 @@
+Select
+first_name,
+last_name,
+email
+From customer
+order by last_name desc,first_name desc;
+
+Select Distinct
+amount
+From Payment
+order by amount desc
+Limit 5;
+
+Select Distinct
+district
+from address;
+
+Select 
+rental_date 
+From rental 
+order by rental_date desc
+Limit 1;
+
+Select 
+Count(*)
+From Film;
+
+Select
+Count (Distinct last_name)
+from customer;
